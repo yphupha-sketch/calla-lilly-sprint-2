@@ -1,19 +1,37 @@
-# React + Vite
+# Calla Lily React — Sprint 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sprint 2 Backlog
 
-Currently, two official plugins are available:
+| Member | Pages |
+|--------|-------|
+| Black | Login/Register, Homepage |
+| Bush | Tracking, User (Account) |
+| Toto | Cart, Checkout |
+| Phupha | Admin, Products, Product Detail |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Team Member's Tasks
 
-## React Compiler
+**Black** — Login/Register + Homepage
+- Login / Register page
+- Auth state (login/logout)
+- Homepage
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+**Bush** — Tracking + User
+- Tracking page
+- Account page
+- ProgressTracker component
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+**Toto** — Cart + Checkout
+- CartContext (cart state)
+- Cart page
+- Checkout page + place order logic
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Phupha** — Admin + Products + Product Detail
+- Products page (search, filter, sort, )
+- Product Detail page
+- ProductCard component
+- Admin pages (Dashboard, Products CRUD, Orders, Customers)
+C	Create	สร้างข้อมูลใหม่	เพิ่มสินค้าใหม่ (Add Product)
+R	Read	ดึง/แสดงข้อมูล	แสดงตารางรายการสินค้า
+U	Update	แก้ไขข้อมูล	ปุ่ม Edit แก้ราคา/stock
+D	Delete	ลบข้อมูล	ปุ่ม Delete ลบสินค้า
