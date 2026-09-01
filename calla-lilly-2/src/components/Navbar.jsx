@@ -1,40 +1,12 @@
-import React from "react";
-import "./Navbar.css";
-
-const Navbar = ({ cartCount = 0 }) => {
-  return (
-    <nav className="navbar">
-      <div className="navbar__container">
-        <a href="/" className="navbar__logo">
-          Calla Lily
-        </a>
-
-        <div className="navbar__links">
-          <a href="/" className="navbar__link">
-            Shop
-          </a>
-
-          <a href="/collections" className="navbar__link">
-            Collections
-          </a>
-
-          <a href="/about" className="navbar__link">
-            About
-          </a>
+import { Link } from "react-router-dom"
+export default function Navbar (){
+    return(
+        <div className="flex w-full h-16 bg-white justify-between items-center sticky top-0 z-50 shadow-md">
+            <Link to="/" className="p-4 font-bold text-lg tracking-wide text-[#9B151D]">Calla Lily</Link>
+            <div className="flex items-center h-full">
+                <Link to="/" className="px-6 h-full flex items-center font-semibold text-[#9B151D] hover:bg-[#9B151D]/10 transition-colors duration-300">Home</Link>
+                <Link to="/Product" className="px-6 h-full flex items-center font-semibold text-[#9B151D] hover:bg-[#9B151D]/10 transition-colors duration-300">Product</Link>
+            </div>
         </div>
-
-        <a href="/cart" className="navbar__cart">
-          <span>Cart</span>
-
-          {cartCount > 0 && (
-            <span className="navbar__cart-count">
-              {cartCount}
-            </span>
-          )}
-        </a>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+    )
+}

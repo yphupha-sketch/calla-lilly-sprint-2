@@ -1,37 +1,15 @@
 import React from "react";
 import Button from "./Button";
-import "./ProductCard.css";
 
+// TODO: สร้าง ProductCard ให้แสดงสินค้า 1 ชิ้น รับ props:
+// name, price, image, onAddToCart
 const ProductCard = ({
   name,
   price,
   image,
   onAddToCart,
 }) => {
-  return (
-    <article className="product-card">
-      <div className="product-card__image-wrapper">
-        <img
-          src={image}
-          alt={name}
-          className="product-card__image"
-        />
-      </div>
-
-      <div className="product-card__content">
-        <h3 className="product-card__name">{name}</h3>
-
-        <p className="product-card__price">
-          ${price.toFixed(2)}
-        </p>
-
-        <Button
-          name="Add to Cart"
-          onClick={onAddToCart}
-        />
-      </div>
-    </article>
-  );
+  return null; // ← แก้ไขตรงนี้: ให้ return การ์ดสินค้าที่แสดงข้อมูลทั้ง 4 อย่าง
 };
 
 export default ProductCard;
