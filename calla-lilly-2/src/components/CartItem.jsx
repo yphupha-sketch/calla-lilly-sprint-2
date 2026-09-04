@@ -1,69 +1,49 @@
-import React from "react";
-import "./CartItem.css";
+//
 
-const CartItem = ({
-  name,
-  price,
-  image,
-  quantity,
+export default function CartItem({
+  item,
   onIncrease,
   onDecrease,
-  onRemove,
-}) => {
-  const itemTotal = price * quantity;
+  onRemove
+}) {
 
   return (
     <article className="cart-item">
-      <div className="cart-item__image-wrapper">
-        <img
-          src={image}
-          alt={name}
-          className="cart-item__image"
-        />
+
+      <img
+        src={item.image}
+        alt={item.name}
+      />
+
+      <div className="product-info">
+        <h2>{item.name}</h2>
+        <p className="brand">{item.brand}</p>
+        <p className="size">{item.size}</p>
       </div>
 
-      <div className="cart-item__details">
-        <h3 className="cart-item__name">{name}</h3>
+      <div className="quantity-control">
+        <button onClick={() => onDecrease(item.id)}>
+          −
+        </button>
 
-        <p className="cart-item__price">
-          ${price.toFixed(2)}
-        </p>
+        <span>{item.quantity}</span>
 
-        <div className="cart-item__actions">
-          <div className="cart-item__quantity">
-            <button
-              type="button"
-              onClick={onDecrease}
-              disabled={quantity <= 1}
-            >
-              −
-            </button>
-
-            <span>{quantity}</span>
-
-            <button
-              type="button"
-              onClick={onIncrease}
-            >
-              +
-            </button>
-          </div>
-
-          <button
-            type="button"
-            className="cart-item__remove"
-            onClick={onRemove}
-          >
-            Remove
-          </button>
-        </div>
+        <button onClick={() => onIncrease(item.id)}>
+          +
+        </button>
       </div>
 
-      <p className="cart-item__total">
-        ${itemTotal.toFixed(2)}
-      </p>
+      <div className="item-price">
+        ${(item.price * item.quantity).toFixed(2)}
+      </div>
+
+      <button
+        className="remove-button"
+        onClick={() => onRemove(item.id)}
+      >
+        Remove
+      </button>
+
     </article>
   );
-};
-
-export default CartItem;
+}
