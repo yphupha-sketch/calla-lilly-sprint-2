@@ -62,6 +62,8 @@ export default function Cart() {
           ))}
         </div>
 
+
+          {/* ส่วนนี้คือ order summary */}
         <aside className="bg-white border border-[#E8BFB5] rounded-xl p-6 h-fit shadow-md">
           <h2 className="text-xl font-bold text-[#3A2B25] mb-4">Summary</h2>
           <div className="flex justify-between py-2 text-[#9A6A5E]">
